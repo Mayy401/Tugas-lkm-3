@@ -1,0 +1,16 @@
+import { useAuth } from "../context/AuthContext";
+
+function Profile() {
+  const { user } = useAuth();
+  return (
+    <div className="card">
+    <section className="profile">
+      <h2>Profil Saya</h2>
+      <p>Nama: {user.name}</p>
+      <p>Email: {user.email}</p>
+    </section>
+    </div>
+  );
+}
+
+export default Profile;
